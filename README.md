@@ -1,2 +1,0 @@
-# calculator
-Jenkins + Docker | CI 
