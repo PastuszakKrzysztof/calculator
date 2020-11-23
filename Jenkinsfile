@@ -23,8 +23,8 @@ pipeline {
                reportName: "JaCoCo Report"
           ])
           sh "./gradlew jacocoTestCoverageVerification"
-     }
-}
+                 }
+          }
           /*
           stage("Code coverage") {
                steps {
@@ -34,13 +34,13 @@ pipeline {
           }
           */
           stage("Static code analysis") {
-               steps {
-                    sh "./gradlew checkstyleMain"
-                    publishHTML (target: [
-     reportDir: 'build/reports/checkstyle/',
-     reportFiles: 'main.html',
-     reportName: "Checkstyle Report"
-])
+          steps {
+          sh "./gradlew checkstyleMain"
+          publishHTML (target: [
+                reportDir: 'build/reports/checkstyle/',
+                reportFiles: 'main.html',
+                reportName: "Checkstyle Report"
+          ])
                }
           }
           /*
