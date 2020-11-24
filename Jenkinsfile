@@ -65,13 +65,13 @@ pipeline {
                }
           }
           */
-          /*
+          
           stage("Docker push") {
                steps {
                     sh "docker push localhost:5000/calculator:${BUILD_TIMESTAMP}"
                }
           }
-          */
+          
           /*
           stage("Update version") {
                steps {
