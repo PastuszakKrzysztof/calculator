@@ -52,8 +52,6 @@ pipeline {
 
           stage("Docker build") {
                steps {
-                    def dockerHome = tool 'myDocker'
-                    env.PATH = "${dockerHome}/bin:${env.PATH}"
                     sh "docker build -t calculator:${BUILD_TIMESTAMP} ."
                }
           }
